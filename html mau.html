@@ -1,0 +1,92 @@
+<span style="font-size: 12px">
+	<link rel="stylesheet" href="./drb.css">
+	<script src="./main.js" type="text/javascript" refer></script>
+  <h2> Bài 1: Đại cương dịch tễ học </h2>
+	<ul class="tab-nav">
+		<li>
+			<button class="tab-link active" data-tab="tab-qs">Câu hỏi</button>
+		</li>
+		<li>
+			<button class="tab-link" data-tab="tab-grid">Mục lục</button>
+		</li>
+	</ul>
+
+	<div class="tab-content active" id="tab-qs">
+		<div class="question" id="question-area">
+			<td class="caption">
+				<div id="question-container">
+					<h3 id="question"></h3>
+					<ul id="answer-container"></ul>
+				</div>
+				<div class="btn-container" id="btn-container">
+					<button class="btn" id="btn-prev">
+						Câu trước
+					</button>
+					<button class="btn" id="btn-next">
+						Câu sau
+					</button>
+				</div>
+				<div class="reset-wrong-container">
+					<button id="btn-reset-wrong" class="btn-reset-wrong">
+						Làm lại câu sai
+					</button>
+				</div>
+			</td>
+		</div>
+	</div>
+	<div class="tab-content" id="tab-grid">
+		<div id="grid-question-container"></div>
+	</div>
+
+	<div class="progress-info">
+		<div class="progress-header">
+			Kết quả:
+		</div>
+
+		<div class="progress-body">
+			<div class="progress-item">
+				<div class="progress-item-header">
+					Đã làm:
+				</div>
+				<div class="progress-item-body">
+					<div class="progress-item-value" id="num-answered"></div>
+				</div>
+			</div>
+			<div class="progress-item">
+				<div class="progress-item-header">
+					Đúng:
+				</div>
+				<div class="progress-item-body">
+					<div class="progress-item-value" id="num-right"></div>
+				</div>
+			</div>
+			<div class="progress-item">
+				<div class="progress-item-header">
+					Điểm:
+				</div>
+				<div class="progress-item-body">
+					<div class="progress-item-value" id="score"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</span>
+<script>
+     function killCopy(e){
+           return false;
+     }
+
+     function reEnable(){
+           return true;
+     }
+
+     document.onselectstart=new Function ("return false");
+
+     if (window.sidebar){
+           document.onmousedown=killCopy;
+           document.onclick=reEnable;
+     }
+</script>
+<script type="text/JavaScript">
+var message="NoRightClicking"; function defeatIE() {if (document.all) {(message);return false;}} function defeatNS(e) {if (document.layers||(document.getElementById&&!document.all)) { if (e.which==2||e.which==3) {(message);return false;}}} if (document.layers) {document.captureEvents(Event.MOUSEDOWN);document.onmousedown=defeatNS;} else{document.onmouseup=defeatNS;document.oncontextmenu=defeatIE;} document.oncontextmenu=new Function("return false") 
+</script>
