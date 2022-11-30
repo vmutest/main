@@ -370,6 +370,7 @@ ul.tab-nav button.tab-link.active {
 
 .progress-info {
     width: 400px;
+    max-width: 100%
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 8px;
